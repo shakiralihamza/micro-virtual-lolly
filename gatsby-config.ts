@@ -35,17 +35,7 @@ const config: GatsbyConfig = {
               }
           }
       },
-      {
-          resolve: "gatsby-source-graphql",
-          options: {
-              // Arbitrary name for the remote schema Query type
-              typeName: "LOLLY",
-              // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-              fieldName: "lolly",
-              // Url to query from
-              url: "https://project-12e-microvirtuallolly.netlify.app/.netlify/functions/read-all",
-          },
-      },
+
       'gatsby-plugin-top-layout',
       'gatsby-plugin-mui-emotion',
   ],
