@@ -7,7 +7,8 @@ const getHandler = (event, context) => {
 
     const typeDefs = gql`
         type Lolly {
-            lollyID: ID!
+            id: ID!
+            lollyID: String!
             colorTop: String!
             colorMiddle: String!
             colorBottom: String!
@@ -24,15 +25,15 @@ const getHandler = (event, context) => {
         Query: {
             lollies: async () => {
                 const response = await client.query(q.Paginate(q.Match(q.Index('all_lollies'))))
-                return response.data.map(([ref, message, from, to, lollyID, colorTop, colorMiddle, colorBottom]) => ({
+                return response.data.map(([ref, lollyID, colorTop, colorMiddle, colorBottom, to, from, message]) => ({
                     id: ref.id,
-                    message,
-                    from,
-                    to,
                     lollyID,
                     colorTop,
                     colorMiddle,
                     colorBottom,
+                    to,
+                    from,
+                    message,
                 }))
             }
         },
