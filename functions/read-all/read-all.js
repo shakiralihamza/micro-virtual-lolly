@@ -22,22 +22,18 @@ const getHandler = (event, context) => {
 
     const resolvers = {
         Query: {
-            todos: async (parents, args, {authorId}) => {
-                if (!authorId) {
-                    return [];
-                } else {
-                    const response = await client.query(q.Paginate(q.Match(q.Index('all_lollies'))))
-                    return response.data.map(([ref, message, from, to, lollyID, colorTop, colorMiddle, colorBottom]) => ({
-                        id: ref.id,
-                        message,
-                        from,
-                        to,
-                        lollyID,
-                        colorTop,
-                        colorMiddle,
-                        colorBottom,
-                    }))
-                }
+            lollies: async () => {
+                const response = await client.query(q.Paginate(q.Match(q.Index('all_lollies'))))
+                return response.data.map(([ref, message, from, to, lollyID, colorTop, colorMiddle, colorBottom]) => ({
+                    id: ref.id,
+                    message,
+                    from,
+                    to,
+                    lollyID,
+                    colorTop,
+                    colorMiddle,
+                    colorBottom,
+                }))
             }
         },
     };
