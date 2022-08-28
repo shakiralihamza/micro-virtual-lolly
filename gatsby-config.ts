@@ -43,7 +43,7 @@ const config: GatsbyConfig = {
               // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
               fieldName: "lolly",
               // Url to query from
-              url: "/.netlify/functions/fauna-graphql",
+              url: "https://project-12e-microvirtuallolly.netlify.app/.netlify/functions/read-all",
           },
       },
       'gatsby-plugin-top-layout',

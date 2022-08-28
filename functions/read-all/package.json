@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-lambda": "^3.10.1",
     "faunadb": "^4.6.0"
   }
 }
