@@ -6,10 +6,14 @@ import Melted from "../components/Melted";
 import Page404 from "./Page404";
 
 const NotFoundPage = () => {
+    const isBrowser = () => typeof window !== "undefined"
+    if (!isBrowser()) {
+        return null
+    }
     const path = window.location.pathname;
 
     //if path does not include /lolly then return general 404
-    if (!path.includes('/lolly/') || !path.includes('/lolly')) {
+    if (!path?.includes('/lolly/') || !path?.includes('/lolly')) {
         return <Page404/>
     }
 
