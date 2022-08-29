@@ -11,7 +11,7 @@ const NotFoundPage = () => {
         return null
     }
     const path = window.location.pathname;
-    console.log('path: ', path);
+
     //if path does not include /lolly then return general 404
     if (!path?.includes('/lolly/') || !path?.includes('/lolly')) {
         return <Page404/>
@@ -23,9 +23,7 @@ const NotFoundPage = () => {
     const url = window.location.href;
     const lollyID = url.split("/").pop();
 
-    console.log('lollyID: ', lollyID);
     useEffect(() => {
-        console.log('UE lollyID: ', lollyID);
         axios.post(`/getLolly/?lollyID=${lollyID}`)
             .then(res => setLolly(res.data))
             .catch(() => setFound(false))
