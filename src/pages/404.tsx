@@ -24,7 +24,7 @@ const NotFoundPage = () => {
     const lollyID = url.split("/").pop();
 
     useEffect(() => {
-        axios.post(`/getLolly/?lollyID=${lollyID}`)
+        axios.post(`/.netlify/functions/showLolly/?lollyID=${lollyID}`)
             .then(res => setLolly(res.data))
             .catch(() => setFound(false))
     }, [])
