@@ -22,7 +22,7 @@ const handler = async (event) => {
         console.log('success', response)
 
         //trigger rebuild of netlify site
-        axios.post('https://api.netlify.com/build_hooks/630bd1abbb46d509036e271e')
+        await axios.post('https://api.netlify.com/build_hooks/630bd1abbb46d509036e271e')
             .then(response => {
                 console.log(response);
             })
