@@ -6,24 +6,43 @@ import FlavorSelectList from "./FlavourSelectList";
 import InputForm from "./InputForm";
 
 
-const CreatePage: FC = ({}) => (
-    <Container maxWidth={'md'}>
-        <Header/>
-        <Grid container justifyContent={'center'} alignItems={'center'} sx={{my: 5}}>
-            <Grid item xs={'auto'}>
-                <Lolly colorTop={'pink'} colorMiddle={'brown'} colorBottom={'blue'}/>
+const CreatePage: FC = ({}) => {
+    const [colorTop, setColorTop] = React.useState("#ff0000");
+    const [colorMiddle, setColorMiddle] = React.useState("#00ff00");
+    const [colorBottom, setColorBottom] = React.useState("#0000ff");
+
+    const onChangeTop = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setColorTop(event.target.value);
+    }
+    const onChangeMiddle = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setColorMiddle(event.target.value);
+    }
+    const onChangeBottom = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setColorBottom(event.target.value);
+    }
+    return (
+        <Container maxWidth={'md'}>
+            <Header/>
+            <Grid container justifyContent={'center'} alignItems={'center'} sx={{my: 5}}>
+                <Grid item xs={'auto'}>
+                    <Lolly colorTop={colorTop} colorMiddle={colorMiddle} colorBottom={colorBottom}/>
+                </Grid>
+                <Grid item>
+                    <FlavorSelectList
+                        colorTop={colorTop}
+                        colorMiddle={colorMiddle}
+                        colorBottom={colorBottom}
+                        onChangeTop={onChangeTop}
+                        onChangeMiddle={onChangeMiddle}
+                        onChangeBottom={onChangeBottom}
+                    />
+                </Grid>
+                <Grid item xs={6} sx={{ml: 8}}>
+                    <InputForm colorBottom={colorBottom} colorMiddle={colorMiddle} colorTop={colorTop}/>
+                </Grid>
             </Grid>
-            <Grid item>
-                <FlavorSelectList colorTop={'#fff'} colorMiddle={'#bbb'} colorBottom={'#aaa'} onChangeTop={() => {
-                }} onChangeMiddle={() => {
-                }} onChangeBottom={() => {
-                }}/>
-            </Grid>
-            <Grid item xs={6} sx={{ml: 8}}>
-                <InputForm/>
-            </Grid>
-        </Grid>
-    </Container>
-);
+        </Container>
+    );
+}
 
 export default CreatePage;

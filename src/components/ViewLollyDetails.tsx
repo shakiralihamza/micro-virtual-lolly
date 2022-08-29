@@ -20,7 +20,7 @@ const IDstyle = {
 
 const detailsStyle = {
     padding: '3.5em 2em',
-    backgroundColor: 'rgba(0,0,0,.2)',
+    backgroundColor: 'rgba(0,0,0,.6)',
     boxShadow: 'rgba(0,0,0,.6) 0 0 10px',
     textAlign: 'left',
     fontStyle: 'italic',
@@ -33,11 +33,11 @@ const detailsStyle = {
 }
 const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, from}) => (
     <Stack spacing={3}>
-        <Typography variant={'body1'} sx={{color: 'white'}}>
+        <Typography variant={'body1'} sx={{color: 'white'}} textAlign={'center'}>
             Enjoy your lolly! Share it with this link:
         </Typography>
         <Paper sx={IDstyle}>
-            {lollyURL}
+            https://project-12e-microvirtuallolly.netlify.app/{lollyURL}
         </Paper>
         <Paper sx={detailsStyle}>
             <Typography sx={{fontSize: '1.6em'}}>

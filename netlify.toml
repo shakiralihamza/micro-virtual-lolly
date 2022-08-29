@@ -1,10 +1,20 @@
 [dev]
-    command = "npm run develop"
-    port = 8888
-    targetPort = 8000
-    publish = "public"
-    autoLaunch = true
-    framework = "#custom"
+command = "npm run develop"
+port = 8888
+targetPort = 8000
+publish = "public"
+autoLaunch = true
+framework = "#custom"
 
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
+
+[[redirects]]
+from = "/new"
+to = "/.netlify/functions/create"
+status = 200
+
+[[redirects]]
+from = "/getLolly/*"
+to = "/.netlify/functions/showLolly?lollyID=:splat"
+status = 302
