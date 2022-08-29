@@ -26,7 +26,7 @@ const NotFoundPage = () => {
     console.log('lollyID: ', lollyID);
     useEffect(() => {
         console.log('UE lollyID: ', lollyID);
-        axios.post(`/.netlify/functions/showLolly/?lollyID=${lollyID}`)
+        axios.post(`/getLolly/?lollyID=${lollyID}`)
             .then(res => setLolly(res.data))
             .catch(() => setFound(false))
     }, [])
