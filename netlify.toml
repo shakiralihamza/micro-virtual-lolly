@@ -15,6 +15,6 @@ to = "/.netlify/functions/create"
 status = 200
 
 [[redirects]]
-from = "/getLolly/*"
+from = "/getLolly/:lollyID"
 to = "/.netlify/functions/showLolly?lollyID=:splat"
 status = 302
