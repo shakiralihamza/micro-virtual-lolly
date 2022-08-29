@@ -65,8 +65,8 @@ const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, fro
                         }
                     }}
         >
-            from this guy made this virtual lollipop for you. You can <Link to={'/create'}>make your own</Link> to send to a
-            friend who deserve some sugary treat which won't rot their teeth...
+            {from} made this virtual lollipop for you. You can <Link to={'/create'}>make your own</Link> to send to a
+            friend who deserves some sugary treat which won't rot their teeth...
         </Typography>
 
     </Stack>
