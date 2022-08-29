@@ -10,6 +10,7 @@ const client = new Client({
 /* export our lambda function as named "handler" export */
 const handler = async (event, context, callback) => {
     console.log('Function `showLolly` invoked')
+    console.log(event)
     const lollyID = event.queryStringParameters.lollyID
 
     return client.query(
