@@ -13,8 +13,8 @@ package = "@netlify/plugin-functions-install-core"
 from = "/new"
 to = "/.netlify/functions/create"
 status = 200
-
-[[redirects]]
-from = "/getLolly/:lollyID"
-to = "/.netlify/functions/showLolly?lollyID=:splat"
-status = 302
+#
+#[[redirects]]
+#from = "/getLolly/*"
+#to = "/.netlify/functions/showLolly?lollyID=:splat"
+#status = 302
