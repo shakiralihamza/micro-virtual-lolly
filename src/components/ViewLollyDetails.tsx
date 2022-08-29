@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {Paper, Stack, Typography} from "@mui/material";
+import {Link} from "gatsby";
 
 interface ViewLollyDetailsProps {
     lollyURL: string;
@@ -64,7 +65,7 @@ const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, fro
                         }
                     }}
         >
-            from this guy made this virtual lollipop for you. You can <a href={'#'}>make your own</a> to send to a
+            from this guy made this virtual lollipop for you. You can <Link to={'/create'}>make your own</Link> to send to a
             friend who deserve some sugary treat which won't rot their teeth...
         </Typography>
 
