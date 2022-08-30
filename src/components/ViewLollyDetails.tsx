@@ -38,7 +38,7 @@ const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, fro
             Enjoy your lolly! Share it with this link:
         </Typography>
         <Paper sx={IDstyle}>
-            https://project-12e-microvirtuallolly.netlify.app/{lollyURL}
+            https://project-12e-microvirtuallolly.netlify.app/lolly/{lollyURL}
         </Paper>
         <Paper sx={detailsStyle}>
             <Typography sx={{fontSize: '1.6em'}}>
