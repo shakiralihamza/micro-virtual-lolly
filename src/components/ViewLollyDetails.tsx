@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Paper, Stack, Typography} from "@mui/material";
-import Link from "gatsby-link";
+import {navigate} from "gatsby-link";
 
 interface ViewLollyDetailsProps {
     lollyURL: string;
@@ -62,10 +62,12 @@ const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, fro
                         },
                         'a:hover': {
                             borderBottomColor: '#eee',
+                            cursor: 'pointer'
                         }
                     }}
         >
-            {from} made this virtual lollipop for you. You can <Link to={'/create'}>make your own</Link> to send to a
+            {from} made this virtual lollipop for you. You can <a onClick={() => navigate('/create')}>make your
+            own</a> to send to a
             friend who deserves some sugary treat which won't rot their teeth...
         </Typography>
 
