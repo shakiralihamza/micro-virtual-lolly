@@ -4,6 +4,8 @@ import axios from "axios";
 import ViewLollyPage from "../templates/ViewLollyPage";
 import Melted from "../components/Melted";
 import Page404 from "./Page404";
+import ShinyText from "../components/ShinyText";
+import {Box} from "@mui/material";
 
 const NotFoundPage = () => {
     const isBrowser = () => typeof window !== "undefined"
@@ -28,6 +30,20 @@ const NotFoundPage = () => {
             .then(res => setLolly(res.data))
             .catch(() => setFound(false))
     }, [])
+
+    //preloader
+    if (found) {
+        return (
+            <Box sx={{
+                height: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}>
+                <ShinyText text={'Unwrapping...'} size={'12'} italic={true}/>
+            </Box>
+        );
+    }
 
     //if lolly exists, show it
     if (lolly !== undefined) {
