@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Box, Grid} from "@mui/material";
 import ShinyText from "./ShinyText";
-import {navigate} from "gatsby";
+import {navigate} from "gatsby-link";
 
 const Header: FC = ({}) => (
     <Grid container justifyContent={'center'} direction={'column'} alignItems={'center'}>

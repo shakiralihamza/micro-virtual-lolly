@@ -3,7 +3,7 @@ import {Box, Container, Grid, Stack} from "@mui/material";
 import Lolly from "./Lolly";
 import Button from "./Button";
 import Header from "./Header";
-import {navigate} from "gatsby";
+import {navigate} from "gatsby-link";
 
 
 const IndexPage: FC = ({}) => (

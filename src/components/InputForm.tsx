@@ -5,7 +5,7 @@ import Button from "./Button";
 import {Field, Form, Formik} from "formik";
 import * as Yup from 'yup';
 import {nanoid} from "nanoid";
-import {navigate} from "gatsby";
+import {navigate} from "gatsby-link";
 
 interface InputFormProps {
     colorTop: string;
@@ -30,12 +30,12 @@ const InputForm: FC<InputFormProps> = ({colorTop, colorBottom, colorMiddle}) => 
 
                 to: Yup.string()
                     .min(2, 'Too Short!')
-                    .max(15, 'Must be 15 characters or less')
+                    .max(20, 'Must be 15 characters or less')
                     .required('Required'),
 
                 from: Yup.string()
                     .min(2, 'Too Short!')
-                    .max(15, 'Must be 15 characters or less')
+                    .max(20, 'Must be 15 characters or less')
                     .required('Required'),
 
                 message: Yup.string()
@@ -47,7 +47,6 @@ const InputForm: FC<InputFormProps> = ({colorTop, colorBottom, colorMiddle}) => 
                 const newLolly = {...values, lollyID, colorTop, colorMiddle, colorBottom}
                 createLolly(newLolly)
                     .then(() => {
-                        // console.log('API response', response)
                         navigate(`/lolly/${lollyID}`)
                     })
                     .catch((error) => {

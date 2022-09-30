@@ -1,30 +1,29 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Header from "./Header";
 import {Box, Container, Grid, Typography} from "@mui/material";
-import {HeadFC, navigate} from "gatsby";
+import {HeadFC} from "gatsby";
+import {navigate} from "gatsby-link";
 import Button from "./Button";
 import MeltedLolly from "./MeltedLolly";
 
-function Melted() {
-    return (
-        <Container maxWidth={'md'}>
-            <Header/>
+const Melted:FC = ({}) => (
+    <Container maxWidth={'md'}>
+        <Header/>
 
-            <Typography variant={'h4'} sx={{textAlign: 'center', my: 7}}>Oops! This lolly has melted.</Typography>
+        <Typography variant={'h4'} sx={{textAlign: 'center', my: 7}}>Oops! This lolly has melted.</Typography>
 
-            <Grid container justifyContent={'center'} direction={'column'} alignItems={'center'}>
-                <Grid item>
-                    <MeltedLolly/>
-                </Grid>
-                <Grid item sx={{mt: 8, mb: 10}}>
-                    <Box component={'span'} onClick={() => navigate('/create')}>
-                        <Button text={'Make a new lolly to send to a friend'}/>
-                    </Box>
-                </Grid>
+        <Grid container justifyContent={'center'} direction={'column'} alignItems={'center'}>
+            <Grid item>
+                <MeltedLolly/>
             </Grid>
-        </Container>
-    );
-}
+            <Grid item sx={{mt: 8, mb: 10}}>
+                <Box component={'span'} onClick={() => navigate('/create')}>
+                    <Button text={'Make a new lolly to send to a friend'}/>
+                </Box>
+            </Grid>
+        </Grid>
+    </Container>
+);
 
 export default Melted;
 

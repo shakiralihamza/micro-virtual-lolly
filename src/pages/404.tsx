@@ -12,7 +12,7 @@ const NotFoundPage = () => {
     }
     const path = window.location.pathname;
 
-    //if path does not include /lolly then return general 404
+    //if path does not include /lolly then return typical 404
     if (!path?.includes('/lolly/') || !path?.includes('/lolly')) {
         return <Page404/>
     }
@@ -29,11 +29,11 @@ const NotFoundPage = () => {
             .catch(() => setFound(false))
     }, [])
 
-    //if lolly exists, return ViewLollyPage
+    //if lolly exists, show it
     if (lolly !== undefined) {
         return <ViewLollyPage pageContext={lolly}/>
     }
-    //if lolly does not exist, return Melted
+    //if lolly does not exist, show Melted Lolly Page
     if (!found) {
         return <Melted/>
     }

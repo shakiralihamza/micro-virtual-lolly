@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Paper, Stack, Typography} from "@mui/material";
-import {Link} from "gatsby";
+import Link from "gatsby-link";
 
 interface ViewLollyDetailsProps {
     lollyURL: string;
