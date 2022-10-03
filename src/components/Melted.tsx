@@ -6,11 +6,16 @@ import {navigate} from "gatsby-link";
 import Button from "./Button";
 import MeltedLolly from "./MeltedLolly";
 
-const Melted:FC = ({}) => (
+const Melted: FC = ({}) => (
     <Container maxWidth={'md'}>
         <Header/>
 
-        <Typography variant={'h4'} sx={{textAlign: 'center', my: 7}}>Oops! This lolly has melted.</Typography>
+        <Typography
+            variant={'h4'}
+            sx={{textAlign: 'center', my: 7, fontSize: {xs: '1.5em', sm: '2em'}}}
+        >
+            Oops! This lolly has melted.
+        </Typography>
 
         <Grid container justifyContent={'center'} direction={'column'} alignItems={'center'}>
             <Grid item>

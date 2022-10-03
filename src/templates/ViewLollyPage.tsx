@@ -23,10 +23,10 @@ const ViewLollyPage: FC<ViewLollyPageProps> = ({pageContext}) => {
         <>
             <Header/>
             <Grid container justifyContent={'center'} alignItems={'center'} sx={{my: 5}} spacing={1}>
-                <Grid item xs={2}>
+                <Grid item xs={'auto'} sm={3} md={2}>
                     <Lolly colorTop={colorTop} colorMiddle={colorMiddle} colorBottom={colorBottom}/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={11} sm={8} md={6} mt={{xs:2, sm:0}}>
                     <ViewLollyDetails lollyURL={lollyID} to={to} from={from} message={message}/>
                 </Grid>
             </Grid>

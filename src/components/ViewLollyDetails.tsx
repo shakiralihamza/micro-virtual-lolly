@@ -47,16 +47,16 @@ const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, fro
             <Typography sx={{fontSize: '1.1em', mt: 5, mb: 6}}>
                 {message}
             </Typography>
-            <Typography sx={{fontSize: '1.6em', pl: '2em'}}>
+            <Typography sx={{fontSize: '1.6em', pl: {xs: '1em', sm: '2em'}}}>
                 — {from}
             </Typography>
         </Paper>
         <Typography variant={'body2'} textAlign={'center'} px={'5px'}
                     sx={{
-                        color:'rgba(255,255,255,.6)',
+                        color: 'rgba(255,255,255,.6)',
                         'a': {
                             color: '#eee',
-                            borderBottom:'solid 1px',
+                            borderBottom: 'solid 1px',
                             borderBottomColor: '#f88cdd',
                             textDecoration: 'none',
                         },
