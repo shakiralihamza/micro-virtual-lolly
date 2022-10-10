@@ -17,6 +17,7 @@ const IDstyle = {
     fontFamily: 'Gochi Hand',
     textAlign: 'center',
     boxShadow: 'rgba(0,0,0,.6) 0 0 10px',
+    wordWrap: 'break-word'
 }
 
 const detailsStyle = {
