@@ -14,7 +14,7 @@ const IDstyle = {
     padding: ".6em 1.5em",
     border: 'solid 1px #000',
     backgroundColor: '#000',
-    fontFamily: '"Yellowtail", cursive',
+    fontFamily: 'Gochi Hand',
     textAlign: 'center',
     boxShadow: 'rgba(0,0,0,.6) 0 0 10px',
 }
@@ -29,7 +29,7 @@ const detailsStyle = {
     fontSize: '1.1em',
     color: 'white',
     '.MuiTypography-root': {
-        fontFamily: '"Yellowtail", cursive',
+        fontFamily: 'Gochi Hand',
     }
 }
 const ViewLollyDetails: FC<ViewLollyDetailsProps> = ({to, lollyURL, message, from}) => (
