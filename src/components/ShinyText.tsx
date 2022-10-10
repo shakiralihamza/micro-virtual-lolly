@@ -19,7 +19,7 @@ const ShinyText: FC<ShinyTextProps> = ({text, size, italic}) => (
             color: '#fff',
             borderBottomStyle: 'none',
             textShadow: '#fa73d9 0 0 8px',
-            fontFamily: 'cursive',
+            fontFamily: 'Gochi Hand',
         }}
     >
         {text}
