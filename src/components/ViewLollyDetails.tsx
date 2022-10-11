@@ -26,7 +26,7 @@ const detailsStyle = {
     boxShadow: 'rgba(0,0,0,.6) 0 0 10px',
     textAlign: 'left',
     fontStyle: 'italic',
-    fontFamily: '"Yellowtail", cursive',
+    fontFamily: 'Gochi Hand',
     fontSize: '1.1em',
     color: 'white',
     '.MuiTypography-root': {

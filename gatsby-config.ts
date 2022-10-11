@@ -10,6 +10,13 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
       {
+          resolve: `gatsby-plugin-google-fonts`,
+          options: {
+              fonts: [`Gochi Hand`],
+              display: "swap",
+          },
+      },
+      {
           resolve: `gatsby-plugin-manifest`,
           options: {
               name: `Virtual Lolly App`,
