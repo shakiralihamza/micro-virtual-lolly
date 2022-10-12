@@ -37,7 +37,7 @@ const CreatePage: FC = ({}) => {
                         onChangeBottom={onChangeBottom}
                     />
                 </Grid>
-                <Grid item xs={10} sm={6} sx={{ml: {xs:0, sm:8}, mt: {xs:5, sm:0}}}>
+                <Grid item xs={12} sm={6} sx={{ml: {xs:0, sm:8}, mt: {xs:5, sm:0}}}>
                     <InputForm colorBottom={colorBottom} colorMiddle={colorMiddle} colorTop={colorTop}/>
                 </Grid>
             </Grid>
